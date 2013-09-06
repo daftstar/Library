@@ -1,23 +1,39 @@
-# the below lines instantiate the files books.rb, user.rb, checkout.rb and desposit.rb 
-# each of which serve their own function
-
-require_relative "books"
-require_relative "user"
-#require_relative "checkout"
-#require_relative "deposit"
+=begin
+These functions will handle all the library specific transactions. These include handling: 
+	- what books are in stock
+	- what books are checked out by whom 
 
 
-#Creates a new book called farenheit_451 while passing in the the parameters author, title and description. 
 
-farenheit_451 = Books.new(
-	"Bradbury", 
-	"Farenheit 451",
-	"A book about the burning of books in the pursuit of happiness")
+=end
 
-test_book = Books.new(
-	"test author", 
-	"test title", 
-	"test book")
+
+#--------------------------CHECKOUT FUNCTIONALITY--------------------------------------#
+
+class Checkout
+	def Checkout
+		if @books_checkedout >2 
+			puts "Sorry, we need you to return a book before you can check out anymore."
+		else
+			puts "You are now at the checkout counter"
+		end
+	end
+end
+
+
+
+class BookReturn
+	def bookReturn
+ 		puts "what book would you like to deposit?"
+ 	end
+end
+
+
+
+
+
+
+
 
 
 
@@ -32,7 +48,7 @@ test_book = Books.new(
 =begin
 Users should be able to add books to a library
 Books should be able to have information saved about them (author, title, description)
-A user should be able to check out books from the library for one week intervals
+	> A user should be able to check out books from the library for one week intervals
 A user should not be able to check out more than two books at any given time
 Checked-out books should be associated with a user
 Users with overdue books should not be able to request any new books until they turn all their overdue books in

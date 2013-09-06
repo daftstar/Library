@@ -1,21 +1,42 @@
+# the below lines instantiate the files books.rb, user.rb, checkout.rb and desposit.rb 
+# each of which serve their own function.  This file (main.rb) also populates the app with dummy data. 
 
-# this function is meant to handle everything related to the book. 
-# Author, Title, Description, and if it's currently checked out by anyone. 
+require_relative "books"
+require_relative "user"
+require_relative "library"
+
+#require_relative "deposit"
 
 
-#---------------------BOOK DESCRIPTION AND DETAILS FUNCTIONALITY-----------------------#
+#Creates two new books while passing in the the parameters author, title and description.
+#The "" value represents a placeholder for the user who's checked out the book. 
 
-class Books
-  attr_accessor :author, :title, :description, :checked_out_by
-	
-  def initialize (author, title, description, checked_out_by)
-	@author = author
-	@title = title
-	@description = description
-	@checked_out_by = checked_out_by
-  end
+farenheit_451 = Books.new(
+	"Bradbury", 
+	"Farenheit 451",
+	"A book about the burning of books in the pursuit of happiness",
+	"")
 
-end
+test_book = Books.new(
+	"test author", 
+	"test title", 
+	"test book",
+	"")
+
+new_user1 = User.new(
+	"nik",
+	"daftary")
+
+new_user2 = User.new(
+	"First1",
+	"Last1")
+
+
+
+
+
+
+
 
 
 
