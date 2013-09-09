@@ -2,48 +2,41 @@
 These functions will handle all the library specific transactions. These include handling: 
 	- what books are in stock
 	- what books are checked out by whom 
-
-
-
 =end
 
 
 #--------------------------CHECKOUT FUNCTIONALITY--------------------------------------#
+class Library
+  attr_accessor :books_loaned
+  attr_accessor :books_owned
+  attr_reader :lib_name
+  	
+  	def initialize(library_name)
+  		@lib_name = library_name
+  		@books_loaned = []
+  		@books_owned = []
+  		puts "welcome to the #{@lib_name}"
+  	end
 
-class Checkout
-	def Checkout
-		if @books_checkedout >2 
-			puts "Sorry, we need you to return a book before you can check out anymore."
-		else
-			puts "You are now at the checkout counter"
-		end
-	end
-end
 
-
-
-class BookReturn
 	def bookReturn
- 		puts "what book would you like to deposit?"
+ 		puts "what book would you like to return?"
  	end
+
+
+ 	def addBook(book)
+ 		puts "adding books to inventory"
+ 		@books_owned << book
+ 	end
+
+ 	def bookCheckout(book)
+ 		
+
+ 	end
+
+
+
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 =begin
 Users should be able to add books to a library

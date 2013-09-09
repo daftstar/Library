@@ -1,15 +1,23 @@
 # the below lines instantiate the files books.rb, user.rb, checkout.rb and desposit.rb 
 # each of which serve their own function.  This file (main.rb) also populates the app with dummy data. 
 
-require_relative "books"
-require_relative "user"
-require_relative "library"
+# require_relative "books"
+# require_relative "user"
+# require_relative "library"
 
 #require_relative "deposit"
+load './books.rb'
+load './user.rb'
+load './library.rb'
 
 
-#Creates two new books while passing in the the parameters author, title and description.
-#The "" value represents a placeholder for the user who's checked out the book. 
+#creates a new Library called City of Austin Library
+austinLib = Library.new("City of Austin Library")
+
+
+
+# Creates two new books while passing in the the parameters author, title and description.
+# The "" value represents a placeholder for the user who's checked out the book. 
 
 farenheit_451 = Books.new(
 	"Bradbury", 
@@ -23,6 +31,9 @@ test_book = Books.new(
 	"test book",
 	"")
 
+
+#Creates two new users while passing in the the parameters first name, last name
+
 new_user1 = User.new(
 	"nik",
 	"daftary")
@@ -30,6 +41,15 @@ new_user1 = User.new(
 new_user2 = User.new(
 	"First1",
 	"Last1")
+
+puts new_user1
+puts new_user2
+
+
+
+#austinLib.add_book(farenheit_451)
+#austinLib.add_book(test_book)
+
 
 
 

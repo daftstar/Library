@@ -13,12 +13,21 @@ class User
 		@last_name = last_name
 		@books_checkedout = 0
 
-		puts "Hello, welcome to the Maker Library #{first_name} #{last_name}. "
+		puts "Hello, welcome #{first_name} #{last_name}. "
 	end
 
 
  	def accountStatus
 		puts "hello #{@first_name} #{@last_name}, you currently have #{@books_checkedout} books checked out."
+	end
+
+
+	def checkout
+		if @books_checkedout >2 
+			puts "Sorry, we need you to return a book before you can check out anymore."
+		else
+			puts "You are now at the checkout counter"
+		end
 	end
 end
 
