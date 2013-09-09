@@ -6,14 +6,17 @@
 #---------------------BOOK DESCRIPTION AND DETAILS FUNCTIONALITY-----------------------#
 
 class Books
-  attr_accessor :author, :title, :description, :checked_out_by
+  attr_accessor :author, :title, :description, :checked_out_by, :date_check_out, :due_date, :status
 	
-  def initialize (author, title, description, checked_out_by)
-	@author = author
-	@title = title
-	@description = description
-	@checked_out_by = checked_out_by
-  end
+  	def initialize (author, title, description, checked_out_by, date_check_out, due_date, status)
+		@author = author
+		@title = title
+		@description = description
+		@checked_out_by = checked_out_by
+		@date_check_out = date_check_out
+		@due_date = due_date
+		@status = status
+    end
 
 end
 

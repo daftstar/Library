@@ -20,19 +20,33 @@ class Library
 
 
 	def bookReturn
- 		puts "what book would you like to return?"
+ 		puts "Thanks for the book, buddy"
+    @books << book
+    puts "The book #{book.title} was returned to the library."
  	end
 
 
- 	def addBook(book)
- 		puts "adding books to inventory"
+ 	def add_book(book)
+ 		puts "added #{book.title} to library inventory"
+    puts "this book has a status of #{book.status}"
+    puts ""
  		@books_owned << book
  	end
 
- 	def bookCheckout(book)
+ 	def checkout(book)
+    puts "Looks like you're trying to checkout #{book.title}"
+    if 
+      user.books_checkedout < 2
+      user.books_checkedout += 1
+    else
+      puts "sorry, you have too many books checked out"
+    end
+  end
+
+
  		
 
- 	end
+ 	
 
 
 

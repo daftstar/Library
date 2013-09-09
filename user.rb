@@ -7,13 +7,14 @@
 #--------------------------USER INFO FUNCTIONALITY-------------------------------------#
 
 class User
-  attr_accessor :first_name, :last_name
+  attr_accessor :first_name, :last_name, :books_checkedout
 	def initialize(first_name, last_name)
 		@first_name = first_name
 		@last_name = last_name
-		@books_checkedout = 0
+		@books_checkedout = books_checkedout
+			books_checkedout = 0
 
-		puts "Hello, welcome #{first_name} #{last_name}. "
+		puts "Hello, welcome #{first_name} #{last_name}. This message is part of the user class "
 	end
 
 
